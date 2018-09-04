@@ -1,0 +1,546 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <!-- Styles -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <style type="text/css">
+      /* GENERAL START */
+
+      html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      body, html {
+        background-image: url("./handmadepaper.png");
+      }
+
+      .fs-05 {
+        font-size: 0.8rem;
+        opacity: 0.8;
+      }
+
+      .fs-2 {
+        font-size: 1.5rem;
+      }
+
+      .lh-3 {
+        line-height: 3rem;
+      }
+
+      .outer-div {
+        background-image: url("./handmadepaper.png");
+      }
+
+      /* HEADER START */
+
+      #big-header {
+        background-color: #292929;
+        height: 70%;
+        padding: 0 3vh;
+        margin: 0;
+      }
+
+      .header-background-darken {
+        position: absolute;
+        top: -3vh;
+        right: -3vh;
+        bottom: -3vh;
+        left: -3vh;
+        background-color: rgba(0,0,0,0.125);
+        z-index: 1;
+      }
+
+      .header-image {
+        height: calc(100% - 2vh);
+        margin: 1vh auto;
+        display: block;
+
+        background-image: url('headerImage6.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: relative;
+        z-index: 2;
+      }
+
+      .header-background-image {
+        position: absolute;
+        z-index: 0;
+        top: -3vh;
+        right: -3vh;
+        bottom: -3vh;
+        left: -3vh;
+        background-image: url("./starrySky-FromFreeStockPhotosPexels.jpeg");
+        /*background-image: url("https://images.pexels.com/photos/958362/pexels-photo-958362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
+        /*background-image: url('https://i.pinimg.com/originals/41/eb/0c/41eb0caf960150d83cb08059f4cadf2a.jpg');*/
+        /*background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Brazilian_amazon_rainforest.jpg/1200px-Brazilian_amazon_rainforest.jpg');*/
+        background-position: center;
+        background-size: cover;
+      }
+
+      /* NAV BAR START */
+
+      #sticky-nav {
+        background-color: #292929;
+        padding: 0rem 3rem;
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        top: -2px;
+        z-index: 1;
+        margin: 0px;
+      }
+
+      .mce_inline_error {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        background-color: #292929;
+        color: red;
+      }
+
+      /* Horrible !importants to override mailchimp quickly */
+      .email-signup-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+      }
+
+      .email-explain {
+        text-align: right !important;
+        line-height: 3rem !important;
+        padding: 0px !important;
+        color: white !important;
+      }
+
+      .email-signup {
+        margin: 0.5rem 0 !important;
+        width: calc(100% - 110px) !important;
+        border: none !important;
+        padding: 3px 5px 3px 5px !important;
+        height: 2rem !important;
+        text-align: center !important;
+        display: inline !important;
+
+        position: static !important; 
+        transform: none !important;  
+        background-color: white !important; 
+        color: black !important; 
+      }
+
+      #mce-responses .response {
+        font-size: 0.9rem;
+        margin: 0 0 0.5rem 0;
+      }
+
+      #mce-success-response {
+        color: lightgreen;
+      }
+
+      #mce-error-response {
+        color: #ff9b9b;
+      }
+
+      /* target ios specifically to force font size to be 16 to not have zoom in occur*/
+      @supports (-webkit-overflow-scrolling: touch) {
+        .email-signup:focus {
+          font-size: 16px;
+        }
+        .email-signup:focus::placeholder { 
+          font-size: 12px !important;
+          opacity: 1;
+        }
+      }
+
+      /* Horrible !importants to override mailchimp quickly */
+      .mc-field-group {
+        width: 100% !important;
+        padding: 0 !important;
+        min-height: initial !important;
+      }
+
+      /* Horrible !importants to override mailchimp quickly */
+      .email-confirm {
+        margin-top: 0.5rem !important;
+        width: 100px !important;
+        display: block !important;
+        float: right !important;
+        margin: 0.5rem 0 !important;
+        display: inline !important;
+
+        height: 2rem !important;
+        line-height: 1rem !important;
+        font-weight: bold !important;
+        color: white !important;
+
+        border: none !important;
+
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background-size: 1500% 1500%;
+
+        transition: 0.1s font-size, 0.1s line-height;
+
+        -webkit-animation: rainbow 16s ease infinite;
+        -z-animation: rainbow 16s ease infinite;
+        -o-animation: rainbow 16s ease infinite;
+          animation: rainbow 16s ease infinite;
+      }
+
+      .email-confirm.btn:not(:disabled):active {
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+        background-size: 1500% 1500%;
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+      }
+
+      @-webkit-keyframes rainbow {
+          0%{background-position:0% 82%}
+          50%{background-position:100% 19%}
+          100%{background-position:0% 82%}
+      }
+      @-moz-keyframes rainbow {
+          0%{background-position:0% 82%}
+          50%{background-position:100% 19%}
+          100%{background-position:0% 82%}
+      }
+      @-o-keyframes rainbow {
+          0%{background-position:0% 82%}
+          50%{background-position:100% 19%}
+          100%{background-position:0% 82%}
+      }
+      @keyframes rainbow { 
+          0%{background-position:0% 82%}
+          50%{background-position:100% 19%}
+          100%{background-position:0% 82%}
+      }
+
+      .social-container {
+        padding: 0 !important;
+      }
+
+      .social-link {
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      .social-link:hover {
+        text-decoration: none;
+      }
+
+      .social-link i {
+        line-height: 2.43rem;
+      }
+
+      @media (max-width: 992px) {
+        #sticky-nav {
+          font-size: 0.85rem;
+        } 
+
+        #sticky-nav .container {
+          max-width: 100%;
+        }
+
+        .social-link {
+          font-size: 1.5rem;
+        }
+
+        .social-link i {
+          line-height: 3rem;
+        }
+      }
+
+      @media (max-width: 758px) {
+        #sticky-nav {
+          padding: 0 0.5rem;
+          font-size: 0.725rem;
+        } 
+      }
+
+      @media (max-width: 575px) {
+        /* Horrible !importants to override mailchimp quickly */
+        .email-explain {
+          text-align: center !important;
+          line-height: 1rem !important;
+          padding: 0px !important;
+          color: white !important;
+          margin-right: 100px !important;
+          margin-top: 0.5rem !important;
+        }
+      }
+
+      /* CONTENT START */
+
+      #content {
+        outline: 3rem solid transparent;
+      }
+
+      #description {
+        margin: 2rem 2rem 2rem 2rem;
+        text-align: center;
+        line-height: 1.5rem;
+        font-size: 1.125rem;
+      }
+
+      .mag-explanation {
+        margin: 0 2rem 3rem 2rem;
+        text-align: center;
+      }
+
+      .mag-explanation.submissions {
+        /*text-align: left;*/
+      }
+
+      @media (max-width: 575px) {
+        #description {
+          margin: 1rem 0rem;
+        }
+
+        .mag-explanation {
+          margin: 0 0rem 1rem 0rem;
+        }
+      }
+
+      .mag-image img {
+        width: 85%;
+        margin: auto;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='outer-div'>
+      <!-- Big Header Image -->
+      <div id='big-header' class='row'>
+        <div class='col text-center'>
+          <div class='header-image'></div>
+          <div class='header-background-darken'></div>
+          <div class='header-background-image'></div>
+        </div>
+
+      </div>
+      <!-- Navigation bar -->
+      <div id='sticky-nav' class='row text-center'>
+        <div class='container'>
+          <!-- Begin MailChimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <div id="mc_embed_signup" class='row'>
+            <div class='col-sm-3 col-xs-12 email-explain'>  
+              Sign up for email updates            
+            </div> 
+
+            <form action="https://jhomas.us17.list-manage.com/subscribe/post?u=0ea21d342591d4cf6e4091db2&amp;id=47f271e68d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate col-sm-6 col-12 email-signup-container" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+              
+                <div class="mc-field-group">
+                  <input type="email" value="" name="EMAIL" class="required email email-signup" id="mce-EMAIL" placeholder="Get a 10% discount on issue 1!">
+                  <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-sign-up email-confirm">
+                </div>
+
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_0ea21d342591d4cf6e4091db2_47f271e68d" tabindex="-1" value="">
+                </div>
+              </div>
+            </form>
+
+            <div class='col-3 d-none d-sm-block social-container'>
+              <a class='social-link' href='https://twitter.com/MakeGamesMag'>
+                <i class="fab fa-twitter-square"></i>
+              </a>
+
+              <a class='social-link' href='https://www.facebook.com/MakeGamesMag/'>
+                <i class="fab fa-facebook-square"></i>
+              </a>
+
+              <a class='social-link' href='https://www.instagram.com/MakeGamesMag/'>
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a class='social-link' href='mailto:makegamesmag@jhomas.com'>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div id="mce-responses" class="clear row">
+            <div class="col">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+          </div>    
+
+          <script async type='text/javascript' src='./mc-validate.js'></script>
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div id='content' class='container'>
+        <!-- Quick description -->
+        <div id='description' class='row'>
+          <div class='col'>
+            <div class="mb-3">A magazine for the love of the <span class='font-weight-bold'>craft</span> & <span class='font-weight-bold'>business</span> of game making.</div> Designed for everyone, beginners to professionals.
+          </div>
+        </div>
+        
+        <!-- Mag Image 1 -->
+        <div class='row mag-image'>
+          <div class='d-block'>
+            <img itemprop="image" class="preview-mag-image" src="./slicedBread3D3.png"/>
+          </div>
+        </div>
+        <!-- WHAT | Explanation 1 -->
+        <div class='row mag-explanation mb-3'>
+          <div class='col-md-6 col-12 mb-5'>
+            <span class='font-weight-bold fs-2'>What?</span>
+            <br/>
+            <div class=''>
+              A physical magazine for game makers of every kind. Indies to AAA developers, hobbyists to seasoned professionals.
+            </div>
+            <br/>
+              Articles that span: Interviews, tutorials, postmortems, opinions, critiques, getting started, industry news etc. With a focus on hard data and away from hand waiving advice.
+            <br/>
+            <br/>
+              All written by the broad spectrum of people who make games.
+          </div>
+
+          <div class='col-md-6 col-12 mb-3'>
+            <span class='font-weight-bold fs-2'>Product Specs</span>
+            <ul class='list-unstyled'>
+              <li>80 - 100 pages</li>
+              <li>Saddle Stiched</li>
+              <li>Full Colour Printing</li>
+              <li>Intimately Sized</li>
+              <li class='fs-05'>(10.5 × 14.8 cm / 4.1 × 5.8 in)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mag Image 1 -->
+        <div class='row mag-image'>
+        <div class='d-block'>
+          <img itemprop="image" class="preview-mag-image" src="./Peer2PeerCoop3.png"/>
+          </div>
+        </div>
+        <!-- WHAT 2 |Explanation 1 -->
+        <div class='row mag-explanation submissions'>
+          <div class='col-12 col-lg-10 offset-lg-1'>
+            <div class='font-weight-bold fs-2 d-block text-center'>Submissions</div>
+            <span class='text-left'>
+              I am looking for great unpublished articles about interesting experiments, postmortems, sound design tips, strange art styles, sales data, detailed tutorials and anything really related to making games!
+              <br/>
+              <br/>
+            </span>
+
+            <span class='font-weight-bold'>
+              How to Submit
+            </span>
+            
+            <br/>
+
+            <ul class='list-unstyled'>
+              <li>1. <span class='font-weight-bold'>Write</span> an article 250 - 1000 words</li>
+              <li>2. <span class='font-weight-bold'>Grab</span> some supporting screenshots</li>
+              <li>3. <span class='font-weight-bold'>Remember</span> to write down what games / programs the screenshots are from</li>
+              <li>4. <span class='font-weight-bold'>Submit</span> by <a href='https://goo.gl/forms/JKs9OjRx7PFov7pY2'>Clicking Here</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mag Image 1 -->
+        <div class='row mag-image'>
+          <div class='d-block'>
+            <img itemprop="image" class="preview-mag-image" src="./playtesting3.png"/>
+          </div>
+        </div>
+
+        <!-- Who / Contact? | Explanation 1 -->
+        <div class='row mag-explanation'>
+          <div class='col-12 col-lg-10 offset-lg-1'>
+            <span class='font-weight-bold fs-2'>Who?</span>
+            <br/>
+            JHOMAS a 1 person company run by Thomas Morrison out of Ontario, Canada. JHOMAS is Thomas. He has been making games on and off his whole life.
+            <br/>
+            <br/>
+            <br/>
+
+            <div class='row'>
+              <div class='col-md-6 col-12'>
+                <span class='font-weight-bold fs-2'>Make Games Magazine</span>
+                <ul class='list-unstyled'>
+                  <li>
+                    <a class='' href='https://twitter.com/MakeGamesMag'>
+                      <i class="fab fa-twitter-square"></i> @MakeGamesMag
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='https://www.facebook.com/MakeGamesMag/'>
+                      <i class="fab fa-facebook-square"></i> MakeGamesMag
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='https://www.instagram.com/MakeGamesMag/'>
+                      <i class="fab fa-instagram"></i> @MakeGamesMag
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='mailto:jhomas+makeGamesMag@jhomas.com'>
+                      <i class="fas fa-envelope"></i> jhomas+makeGamesMag@jhomas.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='https://makegamesmag.com'>
+                      <i class="fas fa-desktop"></i> makegamesmag.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class='col-md-6 col-12'>
+                <span class='font-weight-bold fs-2'>JHOMAS</span>
+                <ul class='list-unstyled'>
+                  <li>
+                    <a class='' href='https://twitter.com/JhomasJhomas'>
+                      <i class="fab fa-twitter-square"></i> @JhomasJhomas
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='mailto:jhomas@jhomas.com'>
+                      <i class="fas fa-envelope"></i> jhomas@jhomas.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class='' href='http://jhomas.com'>
+                      <i class="fas fa-desktop"></i> jhomas.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </body>
+</html>
