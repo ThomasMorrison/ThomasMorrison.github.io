@@ -1,7 +1,7 @@
 <html lang="en-US">
   <head>
     <meta name="viewport" content="width=device-width">
-    <title>Make Games Magazine</title>
+    <title>Make Games Magazine | Game Files</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125552797-1"></script>
@@ -41,9 +41,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="/general.css">
+
+    <style type="text/css">
+      .game-preview-image {
+        width: 100%;
+        max-height: 400px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+      }
+
+      #game-files .mag-explanation {
+        text-align: left;
+      }
+    </style>
   </head>
 
-  <body>
+  <body id='game-files'>
     <div class='outer-div'>
       <!-- Big Header Image -->
       <div id='big-header' class='row'>
@@ -101,6 +114,7 @@
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
+
           </div>
 
           <div id="mce-responses" class="clear row">
@@ -148,91 +162,48 @@
         <!-- Quick description -->
         <div id='description' class='row'>
           <div class='col'>
-            <div class="mb-3">A magazine for the love of the <span class='font-weight-bold'>craft</span> & <span class='font-weight-bold'>business</span> of game making.</div> Designed for everyone, beginners to professionals.
+            <div class="mb-3">A magazine for the love of the <span class='font-weight-bold'>craft</span> & <span class='font-weight-bold'>business</span> of game making.</div>
+            <div class="mb-3">Designed for everyone, beginners to professionals.</div>
+            <a class='mb-5' href='/index.html'>Find out more here</a>
           </div>
         </div>
-        
-        <!-- Mag Image 1 -->
-        <div class='row mag-image'>
-          <div class='d-block'>
-            <img itemprop="image" class="preview-mag-image" src="./slicedBread3D3.png"/>
-          </div>
+
+        <div class='row mt-5 mb-5 text-center'>
+          <h2 class='col'>
+            Game Files
+          </h2>
         </div>
+
         <!-- WHAT | Explanation 1 -->
-        <div class='row mag-explanation mb-3'>
-          <div class='col-md-6 col-12 mb-5'>
-            <span class='font-weight-bold fs-2'>What?</span>
-            <br/>
-            <div class=''>
-              A physical magazine for game makers of every kind. Indies to AAA developers, hobbyists to seasoned professionals.
-            </div>
-            <br/>
-              Articles that span: Interviews, tutorials, postmortems, opinions, critiques, getting started, industry news etc. With a focus on hard data and away from hand waiving advice.
-            <br/>
-            <br/>
-              All written by the broad spectrum of people who make games.
+        <div class='row mag-explanation mb-5'>
+          <div class='col-md-6 col-12'>
+            <img itemprop="image" class="game-preview-image" src="/source-files/star-husky/cover.jpg"/>
           </div>
 
           <div class='col-md-6 col-12 mb-3'>
-            <span class='font-weight-bold fs-2'>Product Specs</span>
-            <ul class='list-unstyled'>
-              <li>60 - 80 pages</li>
-              <li>Saddle Stiched</li>
-              <li>Full Colour Printing</li>
-              <li>Intimately Sized</li>
-              <li class='fs-05'>(10.5 × 14.8 cm / 4.1 × 5.8 in)</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Mag Image 1 -->
-        <div class='row mag-image'>
-        <div class='d-block'>
-          <img itemprop="image" class="preview-mag-image" src="./Peer2PeerCoop3.png"/>
-          </div>
-        </div>
-        <!-- WHAT 2 |Explanation 1 -->
-        <div class='row mag-explanation submissions'>
-          <div class='col-12 col-lg-10 offset-lg-1'>
-            <div class='font-weight-bold fs-2 d-block text-center'>Submissions</div>
-            <span class='text-left'>
-              I am looking for great unpublished articles about interesting experiments, postmortems, sound design tips, strange art styles, sales data, detailed tutorials and anything really related to making games!
-              <br/>
-              <br/>
-            </span>
-
-            <span class='font-weight-bold'>
-              How to Submit
-            </span>
+            <span class='font-weight-bold fs-2'>Star Husky</span>
             
-            <br/>
+            <div class="fs-05 mb-1">
+              Made with: Construct 3, Audacity, Teenage Engineering Pocket Operator Arcade
+            </div>
 
-            <ul class='list-unstyled'>
-              <li>1. <span class='font-weight-bold'>Write</span> an article 250 - 1000 words</li>
-              <li>2. <span class='font-weight-bold'>Grab</span> some supporting screenshots</li>
-              <li>3. <span class='font-weight-bold'>Remember</span> to write down what games / programs the screenshots are from</li>
-              <li>4. <span class='font-weight-bold'>Submit</span> by <a href='https://goo.gl/forms/JKs9OjRx7PFov7pY2'>Clicking Here</a></li>
-            </ul>
+            <div class='mb-3'>
+              A small simple game that works on phones and desktop. This game was initially made in about 2 days for a competition. It has since been slightly revamped to improve the readability of the code etc. The assets and source code are all public domain, you can remix them as you wish.
+            </div>
+
+            <div class="mb-1">
+              <span class="font-weight-bold">Play on</span> <a href='https://www.newgrounds.com/portal/view/'>Newgrounds</a> | <a href='https://jhomas.itch.io/star-husky'>Itch.io</a> | <a href='https://www.scirra.com/arcade/action-games/'>Construct Arcade</a>
+            </div>
+
+            <div class="mb-1">
+              <span class="font-weight-bold">Download</span> <a href='/source-files/star-husky/source.zip'>Source files</a> | <a href='/source-files/star-husky/gameplay-export.zip'>Exported Game</a>
+            </div>
           </div>
         </div>
-
-        <!-- Mag Image 1 -->
-        <div class='row mag-image'>
-          <div class='d-block'>
-            <img itemprop="image" class="preview-mag-image" src="./playtesting3.png"/>
-          </div>
-        </div>
-
+        
         <!-- Who / Contact? | Explanation 1 -->
-        <div class='row mag-explanation'>
+        <div class='row mag-explanation text-center'>
           <div class='col-12 col-lg-10 offset-lg-1'>
-            <span class='font-weight-bold fs-2'>Who?</span>
-            <br/>
-            Make Games Magazine is made by JHOMAS out of Ontario, Canada. He has been making games for most of his life and doesn't plan on stopping now.
-            <br/>
-            <br/>
-            <br/>
-
             <div class='row'>
               <div class='col-md-6 col-12'>
                 <span class='font-weight-bold fs-2'>Make Games Magazine</span>
