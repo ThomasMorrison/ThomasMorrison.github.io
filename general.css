@@ -136,6 +136,10 @@ body, html {
   color: black !important; 
 }
 
+#mce-responses {
+  margin-top: -1px;
+}
+
 #mce-responses .response {
   font-size: 0.9rem;
   margin: 0 0 0.5rem 0;
